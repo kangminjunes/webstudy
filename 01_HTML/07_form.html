@@ -38,6 +38,7 @@
     <input type = "text" maxlength="5" placeholder="우편번호"><br>
    </p>
 
+   <hr>
    <p>
     <input type ="password" placeholder="비밀번호"><br>
     <input type ="number" min="0" max="100"><br>
@@ -126,9 +127,11 @@
    3) checked | checked  | 기본 선택 라디오 버튼
   -->
 
- <!-- 같은 이름 이여만 한개가 선택된다. 이름이 다르면 다중 선택이 되서 오류 발생한다.
+ <!-- 
+  같은 이름 이여만 한개가 선택된다. 이름이 다르면 다중 선택이 되서 오류 발생한다.
       속성과 속성이름이 같은 경우에 한번만 적으면 된다.
-      ex) checked="cheked" -> cheked로 정리 가능하다. -->
+      ex) checked="cheked" -> cheked로 정리 가능하다. 
+    -->
  <p>
   <input type ="radio" name ="gender" value="" checked> 선택안함
   <input type ="radio" name ="gender" value="male"> 남자
