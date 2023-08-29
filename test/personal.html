@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보수정</title>
+</head>
+<body>
+
+  <form action="login.html">
+  <div>
+    <label for="email">이메일</label>
+    <input type="text" id="email" name="email">
+    <span>@</span>
+      <input type ="text" list="domain" name="email" placeholder="선택 또는 직접입력가능">
+      <datalist id = "domain">
+        <option value="naver.com"></option>
+        <option value="kakao.com"></option>
+        <option value="gmail.com"></option>
+      </datalist> 
+  </div>
+
+  <div>
+    <label for="birthday">생일</label>
+    <input type = "number" size="4" maxlength='4'  min="0" max="2023">
+    <span>년</span>
+    <input type ="number" size="2" maxlength='2' min="0" max="12">
+    <span>월</span>
+    <input type ="number" size="2" maxlength='2' min="0" max="31">
+    <span>일</span>
+  </div>
+
+
+  <div>
+    <label for ="address">거주도시</label>
+    <select name="address" id="address">
+      <option value="seoul">서울</option>
+      <option value="gwangju">광주</option>
+      <option value="daegu">대구</option>
+      <option value="daejeon">대전</option>
+      <option value="busan">부산</option>
+      <option value="ulsan">울산</option>
+      <option value="incheon">인천</option>
+      <option value="etc">기타</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="gender">성별</label>
+      <input type ="radio" name ="gender" value="male" >
+      <label for ="male">남자</label>
+      <input type ="radio" name ="gender" value="female">
+      <label for ="female">여자</label>
+  </div>
+
+  <div>
+      <div>
+        <label for="interset">관심분야</label>
+        <input type ="checkbox" name ="여행" value="1">
+        <label for ="travel">여행</label>
+        <input type ="checkbox" name ="영화" value="2" >
+        <label for ="movie">영화</label>
+        <input type ="checkbox" name ="독서" value="4">
+        <label for ="reading">독서</label>
+        <input type ="checkbox" name ="음악" value="8">
+        <label for ="music">음악</label>
+        <input type ="checkbox" name ="관심없음" value="16" id="not interset">
+        <label for ="not interset">관심없음</label>
+      </div>
+
+      <div>
+        <div><label for ="introduce">자기소개</label></div>
+        <textarea rows ="5" cols="50" name="introduce" id="introduce"></textarea> 
+      </div>
+
+      <div> <button>수정완료</button></div>
+
+    </form>
+
+</body>
+</html>
