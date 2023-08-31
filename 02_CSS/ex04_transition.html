@@ -25,6 +25,7 @@
 
   <hr>
 
+
   <style>
     #box2 {
       width: 100px;
@@ -33,13 +34,46 @@
       transition-property: transform;
       transition-duration: 1s;
     }
-    #box2 :active { 
-     /* transform: translateX(500px); 이동 */
-     /* transform: scaleX(2.0); 크기 */
-     transform: rotate(180deg);
+    #box2:active {
+      /* transform: translateX(500px);  이동 */
+      /* transform: scaleX(2.0);  크기 */
+      transform: rotate(1800deg); 
     }
   </style>
   <div id="box2">box2</div>
+
+  <hr>
+
+  <style>
+    div {
+      box-sizing: border-box;
+    }
+    .image {
+      width: 384px;
+      height: 256px;
+      background-image: url(../../assets/image/fruit1.jpg);
+      background-size: 100%;
+    }
+    .description{
+      width: 384px;
+      height: 256px;
+      background-color: rgb(187, 187, 187, 0.8);
+      font-size: 32px;
+      font-weight: 900;
+      color: white;
+      text-align: center;
+      line-height: 256px;
+      opacity: 0; /* 투명 */
+      transition: transform 1s , opacity 1s;
+    }
+    .image:hover + .description {
+      transform : translateY(-256px);
+      opacity: 1; /* 보임 */
+    }
+  </style>
+
+  <div class="image"></div>
+  <div class="description">맛있는 과일</div>
 
 </body>
 </html>
