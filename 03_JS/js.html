@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 고전 이벤트 모델-->
+  <div id="box1">
+      <button id ="btn">전송</button>
+  </div>
+  <script>
+   document.getElementById('box1').onclick = function(event){
+      alert('전송합니다.');
+    }
+  </script>
+
+  <hr>
+
+  <!-- 표준 이벤트 모델 -->
+  <div id="box2">
+    <button id ="btn">전송</button>
+  </div>
+  <script>
+
+  document.getElementById('box2').addEventListener('click', function(event){
+    alert('전송합니다.');
+  })
+  </script>
+
+  <hr>
+
+  <!-- 인라인 이벤트 모델-->
+  <div id="box3" onclick="myFunc(this)">
+    <button id ="btn">전송</button>
+  </div>
+  <script>
+    function myFunc(dom){
+      alert('전송합니다.');
+    }
+  </script>
+
+  <hr>
+
+  <!-- 3번  구글이동하는 이벤트-->
+
+  <ul id="site">
+    <li><button id="to_site">이동</button></li>
+  </ul>
+  
+  <script>
+    document.getElementById('to_site').addEventListener('click', function () {
+      window.location.href = 'https://www.google.com/';
+    });
+  
+  </script>
+  
+
+  
+
+
+
+
+
+<div>
+  <form action="https://search.naver.com/search.naver" id="frm">
+    <div>
+      <input type="text" id="query" name="query">
+      <button type="submit">네이버 검색</button>
+    </div>
+  </form>
+</div>
+<script>
+  document.getElementById('frm').addEventListener('submit', function (event) {
+    alert('검색어는 ' + document.getElementById('query').value + ' 입니다.');
+  });
+</script>
+
+  
+
+</body>
+</html>
